@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class poop : MonoBehaviour
 {
-    public Transform poopSpwan;
-    public GameObject poopPre;
+    public float lifeTime = 5.0f;
 
-    void Update()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Instantiate(poopPre, poopSpwan.position, Quaternion.identity);
-        }
+        Invoke("DestroyPoop", lifeTime);
+    }
+
+    void DestroyPoop()
+    {
+        Destroy(gameObject);
     }
 }
