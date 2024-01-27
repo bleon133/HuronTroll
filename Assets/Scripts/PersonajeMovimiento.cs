@@ -7,16 +7,12 @@ public class PersonajeMovimiento : MonoBehaviour
     private Rigidbody2D rb2D;
 
     [Header("Movimiento")]
-
     private float movimientoHorizontal = 0f;
-
     [SerializeField] private float velocidadDeMovimiento;
-
     [Range(0, 0.3f)][SerializeField] private float suavizadoDeMovimiento;
-
     private Vector3 velocidad = Vector3.zero;
-
     private bool mirandoDerecha = true;
+    public Vector2 input;
 
     [Header("Salto")]
     [SerializeField] private float fuerzaDeSalto;
@@ -29,6 +25,14 @@ public class PersonajeMovimiento : MonoBehaviour
     [Header("Animacion")]
     private Animator animator;
 
+    [Header("Agacharse")]
+    [SerializeField] private Transform controladorTecho;
+    [SerializeField] private float radioTecho;
+    [SerializeField] private float multiplicadorVelocidadAgachado;
+    [SerializeField] private Collider2D colisionadorAgachado;
+    private bool estabaAgachado = false;
+    private bool agachar = false;
+
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>(); 
@@ -37,7 +41,10 @@ public class PersonajeMovimiento : MonoBehaviour
 
     private void Update()
     {
-        movimientoHorizontal = Input.GetAxisRaw("Horizontal") * velocidadDeMovimiento;
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+
+        movimientoHorizontal = input.x * velocidadDeMovimiento;
 
         animator.SetFloat("Horizontal", Mathf.Abs(movimientoHorizontal));
 
@@ -47,21 +54,60 @@ public class PersonajeMovimiento : MonoBehaviour
         {
             salto = true;
         }
+
+        if(input.y < 0)
+        {
+            agachar = true;
+        }
+        else
+        {
+            agachar = false;
+        }
     }
 
     private void FixedUpdate()
     {
         enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, queEsSuelo);
         animator.SetBool("enSuelo", enSuelo);
+        animator.SetBool("Agachar", estabaAgachado);
 
         //Mover
-        Mover(movimientoHorizontal * Time.fixedDeltaTime, salto);
+        Mover(movimientoHorizontal * Time.fixedDeltaTime, salto, agachar);
 
         salto = false;
     }
 
-    private void Mover(float mover, bool saltar)
+    private void Mover(float mover, bool saltar, bool agachar)
     {
+        if (!agachar)
+        {
+            if (Physics2D.OverlapCircle(controladorTecho.position, radioTecho, queEsSuelo))
+            {
+                agachar = true;
+            }
+        }
+
+        if (agachar)
+        {
+            if (!estabaAgachado)
+            {
+                estabaAgachado = true;
+            }
+
+            mover *= multiplicadorVelocidadAgachado;
+
+            colisionadorAgachado.enabled = false;
+        }
+        else
+        {
+            colisionadorAgachado.enabled = true;
+
+            if (estabaAgachado)
+            {
+                estabaAgachado = false;
+            }
+        }
+
         Vector3 velocidadObjetivo = new Vector2(mover, rb2D.velocity.y);
         rb2D.velocity = Vector3.SmoothDamp(rb2D.velocity, velocidadObjetivo, ref velocidad, suavizadoDeMovimiento);
         if(mover>0 && !mirandoDerecha) {
@@ -91,5 +137,6 @@ public class PersonajeMovimiento : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(controladorSuelo.position, dimensionesCaja);
+        Gizmos.DrawWireSphere(controladorTecho.position, radioTecho);
     }
 }
