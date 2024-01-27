@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class poop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform poopSpwan;
+    public GameObject poopPre;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Instantiate(poopPre, poopSpwan.position, Quaternion.identity);
+        }
     }
 }
