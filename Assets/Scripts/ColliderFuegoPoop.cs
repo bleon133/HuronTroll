@@ -5,21 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class ColliderFuegoPoop : MonoBehaviour
 {
-    [SerializeField] private GameObject fuego;
     [SerializeField] private GameObject poop;
     [SerializeField] private GameObject jugador;
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private float delayBeforeRespawn = 2f;
     private float delayCanva = 3.5f;
-    private bool poopCanKill = true;
+    private bool fuegoEsSeguro = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Verifica si el objeto que colisiona es el fuego y el jugador
-        if (other.gameObject == fuego && jugador != null)
+        if (other.gameObject && jugador != null && other.gameObject == jugador)
         {
-            // Verifica si el "poop" puede matar al jugador
-            if (poopCanKill)
+            if (!fuegoEsSeguro)
             {
                 Rigidbody2D rb = jugador.GetComponent<Rigidbody2D>();
                 if (rb != null)
@@ -35,23 +32,11 @@ public class ColliderFuegoPoop : MonoBehaviour
                 }
 
                 Animator animator = other.GetComponent<Animator>();
-                if (animator != null)
-                {
-                    animator.Play("Muerte");
-                }
+                animator.Play("Muerte");
 
                 Destroy(other.gameObject, delayBeforeRespawn);
 
                 StartCoroutine(HandleDeathAndRespawn());
-            }
-        }
-        else if (other.gameObject == poop) // Verifica si el objeto que colisiona es el "poop"
-        {
-            // Desactiva el collider del "poop"
-            Collider2D poopCollider = poop.GetComponent<Collider2D>();
-            if (poopCollider != null)
-            {
-                poopCollider.enabled = false;
             }
         }
     }
@@ -59,7 +44,6 @@ public class ColliderFuegoPoop : MonoBehaviour
     private IEnumerator HandleDeathAndRespawn()
     {
         yield return new WaitForSeconds(delayCanva);
-
         gameOverCanvas.SetActive(true);
     }
 
