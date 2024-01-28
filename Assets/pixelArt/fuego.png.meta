@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 446de411abf5a2744ada50edb1ebd38c
+guid: f7c1f9c272ad9d04f9e47e05143e9fa5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: fuego_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 118
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3515c789702b0741afd181ac0d619df
+      internalID: 1877313967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuego_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 0
+        width: 118
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8340c40abac210542b84d4f676c1d371
+      internalID: 1730918214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuego_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 116
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d354212e4ec67c4ab1a76a0661dabcf
+      internalID: -317294057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuego_3
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 0
+        width: 118
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298fb9acca8bcd14b8f07ff0131f97f9
+      internalID: 664082800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuego_4
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 118
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f26dd9d2b615764ea7c165e13e6475e
+      internalID: 1075081615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuego_5
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 0
+        width: 118
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b12d038c729a824ba55f6c267ab3ebd
+      internalID: -75168468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +271,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fuego_0: 1877313967
+      fuego_1: 1730918214
+      fuego_2: -317294057
+      fuego_3: 664082800
+      fuego_4: 1075081615
+      fuego_5: -75168468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

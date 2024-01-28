@@ -5,8 +5,6 @@ using TMPro;
 
 public class PersonajeMovimiento : MonoBehaviour
 {
-    private int contador = 0;
-    [SerializeField]private TextMeshProUGUI TextContador;
     private Rigidbody2D rb2D;
 
     [Header("Movimiento")]
@@ -40,13 +38,6 @@ public class PersonajeMovimiento : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        TextContador.text = "0";
-    }
-
-    public void CogerItem()
-    {
-        contador++;
-        TextContador.text = contador.ToString();
     }
 
     private void Update()
