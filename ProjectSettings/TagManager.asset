@@ -42,3 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: MueblesAntes
+    uniqueID: 1869490537
+    locked: 0
+  - name: Elementos
+    uniqueID: 1278146723
+    locked: 0
+  - name: Jugador
+    uniqueID: 1243147575
+    locked: 0
+  - name: MueblesDespues
+    uniqueID: 2485293711
+    locked: 0
