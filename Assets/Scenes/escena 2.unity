@@ -4153,7 +4153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 135266139}
-  nombreEscena: escena2
+  gameOverCanvas: {fileID: 0}
+  delayBeforeRespawn: 2
 --- !u!61 &1478007174
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4299,7 +4300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 135266139}
-  nombreEscena: escena2
+  gameOverCanvas: {fileID: 0}
+  delayBeforeRespawn: 2
 --- !u!95 &1658947628
 Animator:
   serializedVersion: 5
@@ -4937,7 +4939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 135266139}
-  nombreEscena: escena 2
+  gameOverCanvas: {fileID: 0}
+  delayBeforeRespawn: 2
 --- !u!61 &1919365818
 BoxCollider2D:
   m_ObjectHideFlags: 0
