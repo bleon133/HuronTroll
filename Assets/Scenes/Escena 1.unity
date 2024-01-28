@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 257529206}
   - component: {fileID: 257529205}
   m_Layer: 0
-  m_Name: TextContador
+  m_Name: TextContadorLlaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 421410201}
   - component: {fileID: 421410200}
   m_Layer: 0
-  m_Name: TextContador
+  m_Name: TextContadorItems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2008,7 +2008,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -734981612, guid: 6437d129bffdd7a4d86e802db23c0993, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3537,7 +3537,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584858780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.913106, y: -2.29515, z: -10}
+  m_LocalPosition: {x: -2.8936691, y: -2.29514, z: -10}
   m_LocalScale: {x: 1.3801, y: 1.3801, z: 1.3801}
   m_ConstrainProportionsScale: 0
   m_Children: []
