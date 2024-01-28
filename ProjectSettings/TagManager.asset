@@ -3,16 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Suelo
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Suelo
+  - 
   - 
   - 
   - 
@@ -41,16 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: MueblesAntes
-    uniqueID: 1869490537
-    locked: 0
-  - name: Elementos
-    uniqueID: 1278146723
-    locked: 0
-  - name: Jugador
-    uniqueID: 1243147575
-    locked: 0
-  - name: MueblesDespues
-    uniqueID: 2485293711
     locked: 0
