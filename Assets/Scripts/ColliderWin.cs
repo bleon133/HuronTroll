@@ -31,6 +31,6 @@ public class ColliderWin : MonoBehaviour
     }
     public void Menu()
     {
-        SceneManager.LoadScene("Escena 2");
+        SceneManager.LoadScene("Agradecimos");
     }
 }
