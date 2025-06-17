@@ -48,7 +48,7 @@
 
 ## Capturas de pantalla
 
-![Pantalla de Inicio](./screenshots/intro.png)
+![Pantalla de Inicio](./screenshots/HuronTroll.png)
 ![Nivel 1](./screenshots/level1.png)
 ![Recolectables](./screenshots/collectables.png)
 
