@@ -281,13 +281,6 @@ Los commits del repositorio cuentan las 48 horas mejor que cualquier resumen:
 
 Hay algo muy honesto en esos mensajes (`Shit`, `llll`, `fff`, `Madrugada`): son los commits reales de un equipo trabajando contra el reloj, sin tiempo para escribir mensajes bonitos. Y el resultado es un juego que se puede jugar de principio a fin.
 
-**Reparto del trabajo** (según los archivos que tocó cada persona):
-
-- **d3vsTech** llevó el grueso de la programación y los niveles: las escenas `Escena 1` y `Escenario 3`, los animators del ratón y los braseros, y la mecánica de la caca con sus colisiones.
-- **Ar3nal3s** hizo la **cinemática completa**: la escena `storyboard`, su script, las cinco láminas (`n1`–`n5`) y la configuración del build, además de la escena 2.
-- **Stephen León** se encargó de las **capturas** y del cierre.
-- **Brayan Steven León Martínez** (este repositorio) dejó el README del proyecto.
-
 ---
 
 ## Lo que quedó fuera del build
@@ -300,14 +293,12 @@ Esa escena **no está incluida en el Build Settings**, así que el nivel 3 no fo
 
 ## Equipo
 
-Proyecto de la **Global Game Jam 2024**, tema *"Make Me Laugh"*.
+Proyecto de la **Global Game Jam 2024**, tema *"Make Me Laugh"*, desarrollado en equipo:
 
-| Integrante | Rol principal |
-| --- | --- |
-| **d3vsTech** | Programación y diseño de niveles |
-| **Ar3nal3s** | Cinemática, storyboard y build |
-| **Stephen León** | Capturas y cierre |
-| **Brayan Steven León Martínez** | README y documentación del proyecto |
+- **Diego Estupiñán**
+- **Kevin**
+- **Johan Arenales**
+- **Brayan León**
 
 <br>
 
